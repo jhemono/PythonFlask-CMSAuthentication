@@ -118,7 +118,7 @@ def test_database_migration_module1():
     # > flask add-content
     assert migrations_exists, \
         'Have you run the `flask db init` command?'
-    versions_file_exists = versions_exists and len(list(versions.glob('*_.py'))) == 1 
+    versions_file_exists = versions_exists and len(list(versions.glob('*_.py'))) >= 1 
     assert versions_file_exists, \
         'Have you run the `flask db migrate` command?'
         
